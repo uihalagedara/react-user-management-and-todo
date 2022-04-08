@@ -79,13 +79,13 @@ userRouter.get('/todos', passport.authenticate('jwt', {session:false}),(req,res)
     })
 })
 
-userRouter.get('/admin', passport.authenticate('jwt', {session:false}),(req,res)=>{
+/*userRouter.get('/admin', passport.authenticate('jwt', {session:false}),(req,res)=>{
     if(req.user.role=='admin'){
         res.status(200).json({message:{msgBody:"You are an admin", msgerr:false}})
     }
     else
         res.status(403).jasn({message:{msgBody: "You are not an admin", msgerr:true}})
-})
+})*/
 
 
 userRouter.get('/authenticated', passport.authenticate('jwt', {session:false}),(req,res)=>{
